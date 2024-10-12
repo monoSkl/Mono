@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background-image: url(img/backgroundimg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(0,0,0,0), rgba(255,255,255,.8));
+}
+
+nav {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  color: #222;
+}
+
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.topmenu > li > a {
+  position: relative;
+  padding: 10px 15px;
+  font-family: monospace;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.submenu {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 100%;
+  width: 150px;
+  padding: 15px 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.2);
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: .3s;
+}
+
+.submenu a {
+  font-family: monospace;
+  font-size: 11px;
+  padding: 5px 10px;
+  transition: .3s;
+}
+
+.submenu a:hover {
+  background: #e8e8e8;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.coin {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  background-color: #ffd700; 
+  background-image: url('img/coinlogo.png'); 
+  background-size: 80%; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; 
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.3); 
+  user-select: none;
+}
+
+.coin:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.5); 
+}
+
+.m-amount {
+  font-size: 48px; 
+  margin-bottom: 20px; 
+  color: #ffd700; 
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5); 
+}
